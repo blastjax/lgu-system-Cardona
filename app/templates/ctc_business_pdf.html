@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Tax Certificate</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #000;
+      }
+      .certificate-container {
+        width: 800px;
+        border: 1px solid #000;
+        padding: 20px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header h1 {
+        font-size: 24px;
+      }
+      .details-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      .details-table th,
+      .details-table th {
+        border: 1px solid #000;
+        padding: 10px;
+        text-align: left;
+      }
+      .signature-section {
+        margin-top: 40px;
+      }
+      .signature-section table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .signature-section th,
+      .signature-section th {
+        border: 1px solid #000;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="certificate-container">
+      <div class="header">
+        <h1>COMMUNITY TAX CERTIFICATE</h1>
+        <h2>CORPORATION</h2>
+        <p><strong>{{id}}</strong></p>
+      </div>
+      <table class="details-table">
+        <tr>
+          <th style="width:25%">
+            YEAR <br />
+            {{year}}
+          </th>
+          <th colspan="2">
+            PLACE OF ISSUE (City / Mun. / Prov.) <br />
+            {{place_of_issue}}
+          </th>
+          <th>
+            DATE ISSUED <br />
+            {{date_issued}}
+          </th>
+        </tr>
+        <tr>
+          <th colspan="3">
+            COMPANY'S FULL NAME <br />
+            {{full_name}}
+          </th>
+          <th colspan="">
+            TIN (if any): <br />
+            {{tin}}
+          </th>
+        </tr>
+        <tr>
+          <th colspan="3">
+            ADDRESS OF PRINCIPAL PLACE OF BUSINESS <br />
+            {{address}}
+          </th>
+          <th style="border-bottom: none">
+            DATE OF REG./ INCORPORATION <br />
+            {{date_registered}}
+          </th>
+        </tr>
+        <tr>
+          <th>
+            KIND OF ORGANIZATION <br />
+            {{nature_of_organization}}
+          </th>
+          <th colspan="2">
+            PLACE OF INCORPORATION <br />
+            {{place_of_incorporation}}
+          </th>
+          <th style="border-top: none"></th>
+        </tr>
+
+        <tr>
+          <th colspan="2">
+            KIND/NATURE OF BUSINESS <br />
+            {{nature_of_business}}
+          </th>
+          <th style="text-align: center">TAXABLE AMOUNT</th>
+          <th style="text-align: center">COMMUNITY TAX DUE</th>
+        </tr>
+
+        <tr>
+          <th colspan="2">
+            A. BASIC COMMUNITY TAX (₱500.00)
+          </th>
+          <th style="background-color: #808080"></th>
+          <th>₱{{basic_community_tax}}</th>
+        </tr>
+        <th colspan="2">
+          B. ADDITIONAL COMMUNITY TAX (tax not to exceed ₱10,000.00)
+        </th>
+        <th style="background-color: #808080"></th>
+        <th style="background-color: #808080"></th>
+        <tr>
+          <th colspan="2">
+            1. ASSESSED VALUE OF REAL PROPERTY OWNED IN THE PHILIPPINES (₱2.00 for every ₱5,000.00)
+          </th>
+          <th>₱{{taxable_gross}}</th>
+          <th></th>
+        </tr>
+        <tr>
+          <th colspan="2">
+            2. GROSS RECEIPTS, INCLUDING DIVIDENDS/EARNINGS DERIVED FROM BUSINESS IN THE PHIL. DURING THE PRECEDING YEAR (₱2.00 for every ₱5,000.00)
+          </th>
+          <th>{{taxable_salary}}</th>
+          <th></th>
+        </tr>
+        </tr>
+        <tr>
+          <th colspan="2" style="border-bottom: none;">
+            SIGNATURE/POSITION OF AUTHORIZED OFFICER
+          </th>
+          <th style="text-align: center">TOTAL</th>
+          <th>{{total}}</th>
+        </tr>
+        <tr>
+          <th colspan="2" style="border-top: none"></th>
+          <th style="text-align: center">INTEREST</th>
+          <th>{{interest}}</th>
+        </tr>
+        <tr>
+          <th colspan="2" style="border-bottom: none; border-top: none"></th>
+          <th style="text-align: center">TOTAL AMOUNT PAID</th>
+          <th>{{total_amount}}</th>
+        </tr>
+        <tr>
+          <th colspan="2"style="border-bottom: none; border-top: none"></th>
+          <th colspan="2"style="border-bottom: none">(In words):</th>
+        </tr>
+        <tr>
+          <th colspan="2" style="border-top: none; text-align:center"> {{created_by}} <br />
+            MUNICIPAL/CITY TREASURER</th>
+          <th colspan="2" style="border-top: none"></th>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
