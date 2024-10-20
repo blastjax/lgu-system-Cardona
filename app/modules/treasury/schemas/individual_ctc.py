@@ -1,4 +1,4 @@
-# app/modules/user/schemas/department.py
+# app/modules/user/schemas/individual_ctc.py
 from datetime import date, datetime, timezone
 from typing import Optional
 from pydantic import BaseModel, ConfigDict
