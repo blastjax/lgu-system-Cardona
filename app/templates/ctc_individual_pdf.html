@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Tax Certificate</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #000;
+      }
+      .certificate-container {
+        width: 800px;
+        border: 1px solid #000;
+        padding: 20px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header h1 {
+        font-size: 24px;
+      }
+      .details-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      .details-table th,
+      .details-table th {
+        border: 1px solid #000;
+        padding: 10px;
+        text-align: left;
+      }
+      .signature-section {
+        margin-top: 40px;
+      }
+      .signature-section table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .signature-section th,
+      .signature-section th {
+        border: 1px solid #000;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="certificate-container">
+      <div class="header">
+        <h1>COMMUNITY TAX CERTIFICATE</h1>
+        <h2>INDIVIDUAL</h2>
+        <p><strong>{{id}}</strong></p>
+      </div>
+      <table class="details-table">
+        <tr>
+          <th>
+            YEAR <br />
+            {{year}}
+          </th>
+          <th colspan="2">
+            PLACE OF ISSUE (City / Mun. / Prov.) <br />
+            {{place_of_issue}}
+          </th>
+          <th>
+            DATE ISSUED <br />
+            {{date_issued}}
+          </th>
+        </tr>
+        <tr>
+          <th colspan="3">
+            NAME (SURNAME, FIRST, MIDDLE) <br />
+            {{full_name}}
+          </th>
+          <th>
+            TIN (if any): <br />
+            {{tin}}
+          </th>
+        </tr>
+        <tr>
+          <th colspan="3">
+            ADDRESS <br />
+            {{address}}
+          </th>
+          <th>
+            SEX <br />
+            {{gender}}
+          </th>
+        </tr>
+        <tr>
+          <th>
+            CITIZENSHIP <br />
+            {{citizenship}}
+          </th>
+
+          <th>
+            ICR No. (If an Alien) <br />
+            {{icr_number}}
+          </th>
+          <th colspan="">
+            PLACE OF BIRTH <br />
+            {{place_of_birth}}
+          </th>
+          <th>
+            HEIGHT <br />
+            {{height_cm}}
+          </th>
+        </tr>
+        <tr>
+          <th>CIVIL STATUS</th>
+          <th>{{civil_status}}</th>
+          <th>
+            DATE OF BIRTH <br />
+            {{date_of_birth}}
+          </th>
+          <th>
+            WEIGHT <br />
+            {{weight_kg}}
+          </th>
+        </tr>
+        <tr>
+          <th colspan="2">
+            PROFESSION / OCCUPATION <br />
+            {{occupation}}
+          </th>
+          <th style="text-align: center">TAXABLE AMOUNT</th>
+          <th style="text-align: center">COMMUNITY TAX DUE</th>
+        </tr>
+
+        <tr>
+          <th colspan="2">
+            A. BASIC COMMUNITY TAX (₱5.00) Voluntary or Exempted (₱1.00)
+          </th>
+          <th style="background-color: #808080"></th>
+          <th>₱{{basic_community_tax}}</th>
+        </tr>
+        <th colspan="2">
+          B. ADDITIONAL COMMUNITY TAX (tax not to exceed ₱5,000.00)
+        </th>
+        <th style="background-color: #808080"></th>
+        <th style="background-color: #808080"></th>
+        <tr>
+          <th colspan="2">
+            1. GROSS RECEIPTS OR EARNINGS DERIVED FROM BUSINESS DURING THE
+            PRECEDING YEAR (₱1.00 for every ₱1,000.00)
+          </th>
+          <th>₱{{taxable_gross}}</th>
+          <th></th>
+        </tr>
+        <tr>
+          <th colspan="2">
+            2. SALARIES OR GROSS RECEIPT OR EARNINGS DERIVED FROM EXERCISE OF
+            PROFESSION OR PURSUIT OF ANY OCCUPATION (₱1.00 for every ₱1,000)
+          </th>
+          <th>{{taxable_salary}}</th>
+          <th></th>
+        </tr>
+        <tr>
+          <th colspan="2">
+            3. INCOME FROM REAL PROPERTY (₱1.00 for every ₱1,000)
+          </th>
+          <th>{{taxable_income}}</th>
+          <th></th>
+        </tr>
+        <tr>
+          <th style="border-bottom: none; text-align: center">
+            Right Thumb Print
+          </th>
+          <th style="border-bottom: none; text-align: center">
+            TAXPAYER'S SIGNATURE
+          </th>
+          <th style="text-align: center">TOTAL</th>
+          <th>{{total}}</th>
+        </tr>
+        <tr>
+          <th style="border-bottom: none; border-top: none"></th>
+          <th style="border-bottom: none; border-top: none"></th>
+          <th style="text-align: center">INTEREST</th>
+          <th>{{interest}}</th>
+        </tr>
+        <tr>
+          <th style="border-bottom: none; border-top: none"></th>
+          <th style="border-bottom: none"></th>
+          <th style="text-align: center">TOTAL AMOUNT PAID</th>
+          <th>{{total_amount}}</th>
+        </tr>
+        <tr>
+          <th style="border-bottom: none; border-top: none"></th>
+          <th style="border-bottom: none; border-top: none"></th>
+          <th colspan="2" style="border-bottom: none">(In words):</th>
+        </tr>
+        <tr>
+          <th style="border-top: none"></th>
+          <th style="border-top: none; text-align: center">
+            {{created_by}} <br />
+            MUNICIPAL/CITY TREASURER
+          </th>
+          <th colspan="2" style="border-top: none"></th>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
